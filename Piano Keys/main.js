@@ -1,7 +1,7 @@
 // The keys and notes variables store the piano keys
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
-keys.forEach(function(key) {
+keys.forEach((key) => {
   notes.push(document.getElementById(key));
 })
 
@@ -16,7 +16,7 @@ const keyReturn = function(event) {
 const handler = function(note){ 
   note.onmousedown = (event) => {keyPlay(event)
   }
-  note.onmouseup = (event) => {keyReturn(event)
+  note.onmouseup = event => {keyReturn(event)
 }}
 // Write a loop that runs the array elements through the function
 notes.forEach((note) => {
